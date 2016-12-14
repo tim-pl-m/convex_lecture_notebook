@@ -687,7 +687,7 @@ class Problem(object):
 
             See also the option ``solve_via_dual``.
 
-          * ``handleConeVars = True`` : For Second Order Cone Programming, Mosek handles the SOC inequalities
+          * ``handleConeVars = False`` : For Second Order Cone Programming, Mosek handles the SOC inequalities
             by *appending a standard cone*. This must be done in a careful way, since
             a single variable is not allowed to belong to several standard cones.
 
@@ -752,7 +752,7 @@ class Problem(object):
                            'lboundlimit': None,
                            'boundMonitor': False,
                            'handleBarVars': True,
-                           'handleConeVars': True,
+                           'handleConeVars': False,
                            'solve_via_dual': None,
                            'pass_simple_cons_as_bound' : False,
                            'return_constraints' : False,
